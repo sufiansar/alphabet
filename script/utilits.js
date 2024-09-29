@@ -12,10 +12,34 @@ function showElement(elementId){
 function setBgColor(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-[#FFA500]');
-    console.log(element);
+    // console.log(element);
 
 }
 
+function removeBgColor(elementId){
+    const element=document.getElementById(elementId)
+    element.classList.remove('bg-[#FFA500]')
+}
+
+
+function getElementBYIdForScore(elementId){
+    const element =document.getElementById(elementId);
+    const elementText=element.innerText;
+    const elementIntValue=parseInt(elementText);
+    return elementIntValue;
+}
+
+function setElementByIdS(elementId,value){
+    const element =document.getElementById(elementId);
+    element.innerText=value;
+
+}
+
+function getTextElementById(elementId){
+    const element=document.getElementById(elementId);
+    const displayInnerText=element.innerText;
+    return displayInnerText;
+}
 function playGround(){
     const ranDomWord='abcdefghijklmnopqrstuvwxyz';
     const stringWord=ranDomWord.split('');
@@ -24,7 +48,7 @@ function playGround(){
     const wordFinal=Math.round(randomWordGenerator);
     
     const alphabet=stringWord[wordFinal];
-    console.log(wordFinal,alphabet);
+    // console.log(wordFinal,alphabet);
     return alphabet;
 }
 
